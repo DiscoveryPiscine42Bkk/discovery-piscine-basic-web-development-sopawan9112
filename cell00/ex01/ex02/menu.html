@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SNCF Sandwich Menu</title>
+    <link rel="stylesheet" href="menu.css">
+  </head>
+  <body>
+    <nav class="sncf-menu">
+      <ul>
+        <li>
+          <a href="#">Sandwich SNCF &#x1F354;</a>
+          <ul class="dropdown">
+            <li><a href="#">Ham</a></li>
+            <li><a href="#">Cheese</a></li>
+            <li><a href="#">Butter</a></li>
+            <li><a href="#">Baguette</a></li>
+            <li><a href="#">Pickles</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Drinks &#x1F964;</a>
+          <ul class="dropdown">
+            <li><a href="#">Coffee</a></li>
+            <li><a href="#">Tea</a></li>
+            <li><a href="#">Water</a></li>
+            <li><a href="#">Soda</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Desserts &#x1F370;</a>
+          <ul class="dropdown">
+            <li><a href="#">Chocolate Bar</a></li>
+            <li><a href="#">Croissant</a></li>
+            <li><a href="#">Fruit</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>
+body {
+  background: #f8f8f8;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.sncf-menu {
+  background: linear-gradient(90deg, #e20074 0%, #92278f 100%);
+  padding: 30px 0;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.sncf-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.sncf-menu > ul > li {
+  position: relative;
+  margin: 0 30px;
+}
+
+.sncf-menu a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.3em;
+  padding: 12px 28px;
+  border-radius: 30px;
+  transition: background 0.2s;
+  font-weight: 500;
+}
+
+.sncf-menu > ul > li > a:hover,
+.sncf-menu > ul > li > a:focus {
+  background: rgba(255,255,255,0.18);
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 180px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+  z-index: 100;
+  padding: 10px 0;
+}
+
+.sncf-menu ul li:hover > .dropdown,
+.sncf-menu ul li:focus-within > .dropdown {
+  display: block;
+}
+
+.dropdown li {
+  margin: 0;
+}
+
+.dropdown a {
+  color: #e20074;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 400;
+  transition: background 0.2s, color 0.2s;
+}
+
+.dropdown a:hover,
+.dropdown a:focus {
+  background: #e20074;
+  color: #fff;
+}
